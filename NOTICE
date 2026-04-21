@@ -1,0 +1,33 @@
+Arcanea Studio
+Copyright 2026 Arcanea (Frank Riemer) and contributors
+
+This product includes software derived from:
+
+  Open-Generative-AI
+  https://github.com/Anil-Matcha/Open-Generative-AI
+  Copyright (c) 2025 Anil Matcha
+  Fork base: commit 6f9cdeeb47b42b833c5be2d181fd5dc95abaa09a (2026-04-20)
+
+The upstream repository's `packages/studio` component library declares
+"license": "MIT" in its package.json; the root repository did not contain a
+top-level LICENSE file at the time of forking. Arcanea Studio is redistributed
+under the MIT License in good faith based on that stated component license and
+the upstream author's public description of the project as "open-source."
+
+If you are the upstream author and wish to clarify licensing terms, please open
+an issue at https://github.com/frankxai/arcanea-studio/issues and we will align
+immediately.
+
+Major modifications by Arcanea:
+
+  - Replaced the single-vendor `src/lib/muapi.js` backend with a provider-
+    agnostic `ArcaneaStudioRouter` that dispatches to Muapi, Google Gemini
+    (Nano Banana 2), Fal, and Replicate via `@arcanea/router-spec`.
+  - Rebranded `@arcanea/studio` with Atlantean Teal / Cosmic Blue / Gold
+    design tokens and `ai.arcanea.studio` appId for Electron packaging.
+  - Added lineage, Creation Cards, and Luminor-hierarchy integration
+    (Phase 2+, in progress).
+
+The four generative studios (Image, Video, LipSync, Cinema), the model
+catalog, the Electron shell configuration, and the localStorage upload +
+pending-jobs patterns remain upstream's work, used with gratitude.
