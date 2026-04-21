@@ -18,6 +18,7 @@
 
 import { DEFAULT_PROVIDER, TASK_CLASSES } from './types.js';
 import { MuapiProvider } from './providers/muapi.js';
+import { GeminiProvider } from './providers/gemini.js';
 import { StubProvider } from './providers/stub.js';
 
 const SETTINGS_KEY = 'arcanea.router';
@@ -40,8 +41,8 @@ export class ArcaneaStudioRouter {
     constructor() {
         this.providers = {
             muapi: new MuapiProvider(),
+            gemini: new GeminiProvider(),
             fal: new StubProvider('fal', 'Fal.ai'),
-            gemini: new StubProvider('gemini', 'Google Nano Banana 2'),
             replicate: new StubProvider('replicate', 'Replicate'),
         };
     }
