@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "pnpm install --ignore-workspace --no-frozen-lockfile",
+  "buildCommand": "pnpm --ignore-workspace exec next build",
+  "outputDirectory": ".next",
+  "regions": ["fra1"],
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  },
+  "github": {
+    "silent": false,
+    "autoJobCancelation": true
+  }
+}

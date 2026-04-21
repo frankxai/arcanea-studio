@@ -8,6 +8,8 @@
 
 **Status:** alpha (`v0.1.0-alpha.0`). Working. Router is real. Design system skin, Creation Cards, and Supabase lineage are in flight.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ffrankxai%2Farcanea-studio&project-name=arcanea-studio&repository-name=arcanea-studio)
+
 ![Arcanea Studio](docs/assets/studio_demo.webp)
 
 ## What's in the box
