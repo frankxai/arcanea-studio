@@ -44,6 +44,10 @@ localStorage.setItem('arcanea.router', JSON.stringify({
 
 See [`src/lib/router/README.md`](src/lib/router/README.md) for the full dispatch contract, activation recipes, and provider-authoring guide.
 
+## Living World Engine Alignment
+
+Arcanea Studio should treat `@arcanea/world-sdk` worlds as canonical creative briefs. When a user selects a world repo, read `world.arcanea.json`, visual DNA, characters, locations, and emergent canon from the repo or the app's derived world index. Studio outputs are media assets for the world repo; they should be proposed as files/PRs back to the repo rather than becoming an alternate source of canon. No code adapter is required until the promoted app branch exposes a stable media-write contract.
+
 ## Quickstart
 
 ```bash
