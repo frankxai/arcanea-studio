@@ -1005,7 +1005,7 @@ export default function ImageStudio({
 
   // ── Render ───────────────────────────────────────────────────────────────
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-app-bg relative p-4 md:p-6 overflow-hidden">
+    <div className="studio-liquid-shell w-full h-full flex flex-col items-center justify-center bg-app-bg relative p-4 md:p-6 overflow-hidden">
       
       {/* ── CENTRAL GALLERY AREA ── */}
       <div className="flex-1 w-full max-w-7xl mx-auto overflow-y-auto custom-scrollbar pb-40 lg:pb-32 px-2">
@@ -1113,7 +1113,7 @@ export default function ImageStudio({
         className="absolute bottom-4 w-full max-w-[95%] lg:max-w-4xl z-40 animate-fade-in-up" 
         style={{ animationDelay: "0.2s" }}
       >
-        <div className="w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
+        <div className="studio-liquid-prompt w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
           {/* Top row: upload picker + textarea */}
           <div className="flex items-center gap-2">
             <UploadButton
