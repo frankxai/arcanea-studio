@@ -1,0 +1,205 @@
+diff --git a/.agent-harness.json b/.agent-harness.json
+new file mode 100644
+index 0000000..62f4bc6
+--- /dev/null
++++ b/.agent-harness.json
+@@ -0,0 +1,45 @@
++﻿{
++    "name":  "arcanea-studio",
++    "classification":  "tooling",
++    "owner":  "FrankX AI",
++    "updated":  "2026-06-19",
++    "remote":  "https://github.com/frankxai/arcanea-studio.git",
++    "health":  {
++                   "primaryCheck":  "npm run build",
++                   "manualChecks":  [
++                                        "Review AGENTS.md before edits",
++                                        "Preserve user work and dirty files",
++                                        "Scan public outputs for secrets and private memory"
++                                    ]
++               },
++    "agentGuidance":  {
++                          "readAgentsMd":  true,
++                          "avoidPrivateMemory":  true,
++                          "preserveExistingConventions":  true,
++                          "designTasteKernel":  {
++                                                    "enabled":  true,
++                                                    "root":  "C:\\Users\\frank\\starlight\\repos",
++                                                    "files":  [
++                                                                  "C:\\Users\\frank\\starlight\\repos\\DESIGN_TASTE.md",
++                                                                  "C:\\Users\\frank\\starlight\\repos\\WEB_EXPERIENCE_STANDARD.md",
++                                                                  "C:\\Users\\frank\\starlight\\repos\\MOTION_TASTE_RUBRIC.md",
++                                                                  "C:\\Users\\frank\\starlight\\repos\\MULTI_AGENT_DESIGN_COUNCIL.md",
++                                                                  "C:\\Users\\frank\\starlight\\repos\\VISUAL_QA_GATE.md"
++                                                              ],
++                                                    "appliesTo":  [
++                                                                      "site",
++                                                                      "app",
++                                                                      "landing-page",
++                                                                      "dashboard",
++                                                                      "visual-identity",
++                                                                      "brand",
++                                                                      "motion",
++                                                                      "media",
++                                                                      "social",
++                                                                      "frontend"
++                                                                  ],
++                                                    "motionPlugin":  "motion-design-studio",
++                                                    "visualVerificationRequired":  true
++                                                }
++                      }
++}
+diff --git a/AGENTS.md b/AGENTS.md
+new file mode 100644
+index 0000000..d02c30d
+--- /dev/null
++++ b/AGENTS.md
+@@ -0,0 +1,64 @@
++# Repository Instructions
++
++This repo is part of the FrankX / Starlight / Arcanea agent estate.
++
++## Classification
++
++- Repo: $title
++- Class: $Classification
++- Default health command: $HealthCommand
++- Remote: $Remote
++
++## Agent Rules
++
++- Read this file before making changes.
++- Preserve existing user work and unrelated dirty files.
++- Keep edits scoped to the requested task.
++- Prefer existing repo conventions over new abstractions.
++- Run the health command before handoff when feasible.
++- Do not publish secrets, private memory, credentials, or internal-only strategy.
++
++## Class-Specific Guidance
++
++- Keep utility commands safe and documented.
++- Validate scripts before recommending operational use.
++
++## Handoff
++
++Summarize changed files, validation run, risks, and any follow-up needed.
++
++## Design Taste Kernel
++
++For any site, app, landing page, dashboard, visual identity, brand, motion, media, social, or frontend task, apply the shared Design Taste Kernel before handoff:
++
++- C:\Users\frank\starlight\repos\DESIGN_TASTE.md
++- C:\Users\frank\starlight\repos\WEB_EXPERIENCE_STANDARD.md
++- C:\Users\frank\starlight\repos\MOTION_TASTE_RUBRIC.md
++- C:\Users\frank\starlight\repos\MULTI_AGENT_DESIGN_COUNCIL.md
++- C:\Users\frank\starlight\repos\VISUAL_QA_GATE.md
++
++When motion, scroll, generated media, GIF/video, or premium polish matters, route through the Motion Design Studio plugin/skills and verify the result visually.
++
++
++<!-- PREMIUM-WEB-OS:START -->
++## Premium Intelligence Web OS Adoption
++
++This repo participates in the Starlight Premium Intelligence Web OS.
++
++For any website, app, landing page, dashboard, brand surface, visual asset, motion system, 3D/WebGL scene, generated media, or public-facing UI work:
++
++- Read the estate OS first: `C:\Users\frank\starlight\repos\_intelligence\README.md`.
++- Use the activation contract: `C:\Users\frank\starlight\repos\_intelligence\adoption\activation-contract.md`.
++- Treat `C:\Users\frank\starlight\repos\_intelligence\` as the source of truth for premium web taste, design, motion, WebGL, copy, assets, and quality gates.
++- Use `/pwo` or the `premium-web-os` skill for full builds; use `/mad` for a design council pass.
++- Use `/pwo review-pr` before absorbing another agent's PR or branch.
++- Use `/pwo absorb-assets` before using external, generated, scientific, audio, video, or 3D assets.
++- Use `/pwo motion-score` before shipping cinematic scroll, sound-paired motion, or complex choreography.
++- Build static composition first, add Track A local motion second, add Track B GSAP/Lenis scroll only when earned, and add 3D only with fallback and reduced-motion behavior.
++- Use VIS through `C:\Users\frank\starlight\repos\visual-intelligence` for asset provenance, curation packets, rights, and publication records.
++- Use `C:\Users\frank\starlight\repos\_intelligence\visual-worlds\neural-cosmos.md` for neuroscience, cerebrum, spine, electron, signal, or golden spiral direction.
++- Do not copy reference sites or agencies. Deconstruct principles and create original execution.
++- Do not ship without responsive, accessibility, performance, reduced-motion, and visual QA checks appropriate to the change.
++
++Repo-local instructions remain authoritative when stricter.
++<!-- PREMIUM-WEB-OS:END -->
+diff --git a/packages/studio/src/components/ImageStudio.jsx b/packages/studio/src/components/ImageStudio.jsx
+index 8f454fa..f5a251d 100644
+--- a/packages/studio/src/components/ImageStudio.jsx
++++ b/packages/studio/src/components/ImageStudio.jsx
+@@ -1005,7 +1005,7 @@ export default function ImageStudio({
+ 
+   // ── Render ───────────────────────────────────────────────────────────────
+   return (
+-    <div className="w-full h-full flex flex-col items-center justify-center bg-app-bg relative p-4 md:p-6 overflow-hidden">
++    <div className="studio-liquid-shell w-full h-full flex flex-col items-center justify-center bg-app-bg relative p-4 md:p-6 overflow-hidden">
+       
+       {/* ── CENTRAL GALLERY AREA ── */}
+       <div className="flex-1 w-full max-w-7xl mx-auto overflow-y-auto custom-scrollbar pb-40 lg:pb-32 px-2">
+@@ -1113,7 +1113,7 @@ export default function ImageStudio({
+         className="absolute bottom-4 w-full max-w-[95%] lg:max-w-4xl z-40 animate-fade-in-up" 
+         style={{ animationDelay: "0.2s" }}
+       >
+-        <div className="w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
++        <div className="studio-liquid-prompt w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
+           {/* Top row: upload picker + textarea */}
+           <div className="flex items-center gap-2">
+             <UploadButton
+diff --git a/packages/studio/src/components/VideoStudio.jsx b/packages/studio/src/components/VideoStudio.jsx
+index 6cd99a7..f57fd9f 100644
+--- a/packages/studio/src/components/VideoStudio.jsx
++++ b/packages/studio/src/components/VideoStudio.jsx
+@@ -899,7 +899,7 @@ export default function VideoStudio({
+   return (
+     <div
+       ref={containerRef}
+-      className="w-full h-full flex flex-col items-center justify-center bg-app-bg relative overflow-hidden"
++      className="studio-liquid-shell w-full h-full flex flex-col items-center justify-center bg-app-bg relative overflow-hidden"
+     >
+       {/* ── CENTRAL GALLERY AREA ── */}
+       <div className="flex-1 w-full max-w-7xl mx-auto overflow-y-auto custom-scrollbar pb-40 lg:pb-32 px-2">
+@@ -1026,7 +1026,7 @@ export default function VideoStudio({
+ 
+       {/* ── BOTTOM PROMPT BAR ── */}
+       <div className="absolute bottom-4 w-full max-w-[95%] lg:max-w-4xl z-40 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+-        <div className="w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
++        <div className="studio-liquid-prompt w-full bg-[#0a0a0a]/80 backdrop-blur-3xl rounded-md border border-white/10 p-4 flex flex-col gap-2 shadow-2xl">
+           <div className="flex items-center gap-2 px-1">
+             {/* Image upload button */}
+             <div className="relative">
+diff --git a/packages/studio/src/tailwind.css b/packages/studio/src/tailwind.css
+index b5c61c9..4a1220a 100644
+--- a/packages/studio/src/tailwind.css
++++ b/packages/studio/src/tailwind.css
+@@ -1,3 +1,35 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
++
++@layer components {
++  .studio-liquid-shell {
++    background:
++      radial-gradient(circle at 50% 8%, rgba(217, 255, 0, 0.08), transparent 24%),
++      radial-gradient(circle at 88% 18%, rgba(88, 166, 255, 0.10), transparent 28%),
++      #050505;
++  }
++
++  .studio-liquid-shell::before {
++    content: "";
++    position: absolute;
++    inset: 1rem;
++    pointer-events: none;
++    border-radius: 2rem;
++    border: 1px solid rgba(255, 255, 255, 0.045);
++    background: linear-gradient(135deg, rgba(255,255,255,0.035), transparent 32%);
++    mask-image: linear-gradient(to bottom, black, transparent 72%);
++  }
++
++  .studio-liquid-prompt {
++    border-radius: 1.25rem;
++    border-color: rgba(255, 255, 255, 0.13);
++    background:
++      linear-gradient(135deg, rgba(255,255,255,0.08), transparent 34%),
++      rgba(10, 10, 10, 0.82);
++    box-shadow:
++      inset 0 1px 0 rgba(255,255,255,0.09),
++      0 26px 90px rgba(0,0,0,0.46),
++      0 0 0 1px rgba(217,255,0,0.035);
++  }
++}
