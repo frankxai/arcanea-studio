@@ -1,0 +1,1012 @@
+{
+  "schema_version": "arcanea.comic-packet.v0.1",
+  "world": {
+    "id": "world-tidal-city",
+    "title": "The Last Sound of Home",
+    "mode": "creator-owned",
+    "state": "proposal",
+    "visibility": "shareable",
+    "promise": "A rescue story about the price of keeping love private.",
+    "binding_rule": "A beacon can guide one vessel through the storm when its keeper freely burns one irreplaceable recorded memory; the sensory memory is then permanently lost to the keeper."
+  },
+  "look": "Original monochrome sequential art: dry brush black, spare contour, salt-eroded masonry, practical canvas clothing, large uninked fog fields. One amber accent reserved for the memory glass in concept work; final interior monochrome. Prioritize acting and readable negative space over decorative detail.",
+  "entities": [
+    {
+      "id": "char-iva",
+      "kind": "character",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04; no official Arcanea canon.",
+      "visual": "Iva, adult woman 27; compact build, broad straight nose, short wavy dark hair tucked behind left ear, pale canvas work coat, single rectangular brass clasp at right collar, silver splint on left thumb; no cape, no ornamental armor."
+    },
+    {
+      "id": "char-venn",
+      "kind": "character",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04.",
+      "visual": "Venn, adult man 32; tall angular frame, clean-shaven narrow jaw, black wool ferry coat with one pale stripe on right cuff, soft cap with flat crown; rectangular iron lunch tin."
+    },
+    {
+      "id": "loc-workshop",
+      "kind": "location",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04.",
+      "visual": "Small lamp-repair workshop above a stone ferry landing. Round window facing the channel, workbench on left, exterior beacon ladder on right. Copper kettle with dent on left side; no futuristic interfaces."
+    },
+    {
+      "id": "loc-beacon",
+      "kind": "location",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04.",
+      "visual": "Beacon balcony on same workshop tower, stone parapet hip-height, channel to the east, descending ladder to the west, glass lens housing fixed above parapet; rain comes from the east."
+    },
+    {
+      "id": "loc-ferry",
+      "kind": "location",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04.",
+      "visual": "Small open-deck ferry, wheel at the stern, bow toward the western landing, wet iron railing, tower visible to the west and black pilings to the east."
+    },
+    {
+      "id": "prop-memory",
+      "kind": "prop",
+      "state": "proposal",
+      "visibility": "shareable",
+      "source": "Original generated fixture, 2026-10-04.",
+      "visual": "Palm-size oval amber glass memory ampoule with an offset seam and two small trapped air bubbles. Never a crystal shard or jeweled talisman."
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-iva",
+      "entity_id": "char-iva",
+      "roles": [
+        "identity",
+        "wardrobe"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    },
+    {
+      "id": "ref-venn",
+      "entity_id": "char-venn",
+      "roles": [
+        "identity",
+        "wardrobe"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    },
+    {
+      "id": "ref-workshop",
+      "entity_id": "loc-workshop",
+      "roles": [
+        "environment"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    },
+    {
+      "id": "ref-beacon",
+      "entity_id": "loc-beacon",
+      "roles": [
+        "environment"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    },
+    {
+      "id": "ref-ferry",
+      "entity_id": "loc-ferry",
+      "roles": [
+        "environment"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    },
+    {
+      "id": "ref-memory",
+      "entity_id": "prop-memory",
+      "roles": [
+        "prop",
+        "material"
+      ],
+      "status": "pending",
+      "rights": "unresolved"
+    }
+  ],
+  "initial_state": {
+    "memory": "available",
+    "ampoule": "sealed",
+    "beacon": "dark",
+    "ferry": "missing",
+    "venn": "aboard",
+    "iva_wet": false
+  },
+  "pages": [
+    {
+      "id": "page-01",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-001",
+          "order": 1,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.28
+          ],
+          "intent": "Establish the ordinary home she protects.",
+          "art": "Iva repairs a mundane lamp. Beside her, a copper kettle has stopped whistling. The small memory ampoule stays under a folded cloth.",
+          "composition": "Wide establishing view; workshop left, window center, ladder right.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-workshop",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {},
+          "effects": {},
+          "depends_on": [
+            "prop-memory"
+          ]
+        },
+        {
+          "id": "panel-002",
+          "order": 2,
+          "bbox": [
+            0.05,
+            0.36,
+            0.43,
+            0.28
+          ],
+          "intent": "Make the memory matter before naming its cost.",
+          "art": "She raises the ampoule to her ear. The recorded laugh is suggested by her involuntary smile, never by a ghost or floating notes.",
+          "composition": "Tight face and left-thumb splint; glass at lower right.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-workshop",
+            "ref-memory"
+          ],
+          "dialogue": [
+            {
+              "speaker": "narrator",
+              "text": "She had forgotten the words. Never the laugh."
+            }
+          ],
+          "requires": {
+            "memory": "available"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-001"
+          ]
+        },
+        {
+          "id": "panel-003",
+          "order": 3,
+          "bbox": [
+            0.52,
+            0.36,
+            0.43,
+            0.59
+          ],
+          "intent": "Interrupt private comfort with public need.",
+          "art": "A ferry distress flare crosses the round window. Iva looks up; the smile is gone.",
+          "composition": "Window takes two thirds of frame; Iva silhouette lower left.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-workshop"
+          ],
+          "dialogue": [],
+          "requires": {},
+          "effects": {
+            "ferry": "distress"
+          },
+          "depends_on": [
+            "panel-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-02",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-004",
+          "order": 4,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.22
+          ],
+          "intent": "Move her into the rescue problem.",
+          "art": "Iva emerges onto the balcony holding the ampoule inside her coat. Rain hits the right side of her face.",
+          "composition": "Low wide view from ladder, east-facing channel visible.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ferry": "distress"
+          },
+          "effects": {
+            "iva_wet": true
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-003"
+          ]
+        },
+        {
+          "id": "panel-005",
+          "order": 5,
+          "bbox": [
+            0.05,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "Show the physical danger.",
+          "art": "Beyond the parapet the ferry lists toward black pilings. One figure grips its rail.",
+          "composition": "Long view across channel; boat travels right to left; figure too distant to identify.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon"
+          ],
+          "dialogue": [],
+          "requires": {},
+          "effects": {
+            "ferry": "at_pilings"
+          },
+          "depends_on": [
+            "panel-004"
+          ]
+        },
+        {
+          "id": "panel-006",
+          "order": 6,
+          "bbox": [
+            0.52,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "A practical attempted rescue fails.",
+          "art": "Iva tries the dead beacon lever with her right hand. Nothing lights.",
+          "composition": "Close on right hand and lever; silver-splinted left hand protects glass.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "beacon": "dark"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-005"
+          ]
+        },
+        {
+          "id": "panel-007",
+          "order": 7,
+          "bbox": [
+            0.05,
+            0.63,
+            0.9,
+            0.32
+          ],
+          "intent": "Show the rule through the mechanism.",
+          "art": "She opens the beacon feed door. Its empty ampoule socket matches the glass she carries.",
+          "composition": "Over-shoulder close view; empty oval socket center.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-iva",
+              "text": "Not that one."
+            }
+          ],
+          "requires": {
+            "ampoule": "sealed"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-03",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-008",
+          "order": 8,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.28
+          ],
+          "intent": "Give the endangered person practical agency.",
+          "art": "Venn on the ferry tethers the iron lunch tin to his belt so his hands stay free.",
+          "composition": "Medium view; right-cuff stripe and wet cap readable, tower behind him left.",
+          "characters": [
+            "char-venn"
+          ],
+          "location": "loc-ferry",
+          "reference_ids": [
+            "ref-venn",
+            "ref-ferry"
+          ],
+          "dialogue": [],
+          "requires": {
+            "venn": "aboard"
+          },
+          "effects": {},
+          "depends_on": [
+            "panel-007"
+          ]
+        },
+        {
+          "id": "panel-009",
+          "order": 9,
+          "bbox": [
+            0.05,
+            0.36,
+            0.43,
+            0.28
+          ],
+          "intent": "Make the choice visually legible.",
+          "art": "Iva holds the sealed ampoule away from the feed socket; both occupy opposing ends of the frame.",
+          "composition": "Horizontal close view of splinted left thumb, ampoule, and socket.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [
+            {
+              "speaker": "narrator",
+              "text": "The lens would spend it once. So would she."
+            }
+          ],
+          "requires": {
+            "memory": "available"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-008"
+          ]
+        },
+        {
+          "id": "panel-010",
+          "order": 10,
+          "bbox": [
+            0.52,
+            0.36,
+            0.43,
+            0.59
+          ],
+          "intent": "Delay the decision for emotional pressure.",
+          "art": "Iva closes her eyes to hear the laugh one final time. Rain tracks down her face; she does not smile this time.",
+          "composition": "Front close view; plain background and ample silence.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "memory": "available"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-04",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-011",
+          "order": 11,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.9
+          ],
+          "intent": "The page turn makes delay impossible.",
+          "art": "From Iva's point of view: Venn on the ferry stops waving to hold the rail with both hands as the bow contacts a piling.",
+          "composition": "Full-page wide panel; Iva's small hand with glass enters foreground bottom left, Venn small but identifiable by coat stripe.",
+          "characters": [
+            "char-iva",
+            "char-venn"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-venn",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ferry": "at_pilings"
+          },
+          "effects": {
+            "ferry": "struck_piling"
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-05",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-012",
+          "order": 12,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.22
+          ],
+          "intent": "Begin the irreversible choice.",
+          "art": "Iva removes the ampoule's seam seal with her silver-splinted thumb.",
+          "composition": "Extreme close detail; one decisive movement.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ampoule": "sealed",
+            "memory": "available"
+          },
+          "effects": {
+            "ampoule": "open"
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-011"
+          ]
+        },
+        {
+          "id": "panel-013",
+          "order": 13,
+          "bbox": [
+            0.05,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "Complete insertion without skipping an action.",
+          "art": "The ampoule slides into the matching beacon socket. Her right hand braces the feed door.",
+          "composition": "Close view maintaining the same screen direction as the prior panel.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ampoule": "open"
+          },
+          "effects": {
+            "ampoule": "loaded"
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-012"
+          ]
+        },
+        {
+          "id": "panel-014",
+          "order": 14,
+          "bbox": [
+            0.52,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "Give the sacrifice a personal address.",
+          "art": "Her hand rests on the ignition lever; her mouth forms a remembered word before pulling.",
+          "composition": "Medium side view with negative space before the hand.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-iva",
+              "text": "Mum."
+            }
+          ],
+          "requires": {
+            "ampoule": "loaded",
+            "memory": "available"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-013"
+          ]
+        },
+        {
+          "id": "panel-015",
+          "order": 15,
+          "bbox": [
+            0.05,
+            0.63,
+            0.9,
+            0.32
+          ],
+          "intent": "Pay the cost and change the rescue state.",
+          "art": "She pulls. The glass turns clear. The lens sends a narrow white path across the rain.",
+          "composition": "Tall action panel; glass and light path visible in the same composition.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ampoule": "loaded",
+            "memory": "available",
+            "beacon": "dark"
+          },
+          "effects": {
+            "memory": "spent",
+            "ampoule": "clear",
+            "beacon": "guiding"
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-06",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-016",
+          "order": 16,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.28
+          ],
+          "intent": "Make the rescued person act on the gift.",
+          "art": "Venn sees the light path and turns the wheel away from the pilings.",
+          "composition": "Medium three-quarter view; right-to-left boat travel maintained.",
+          "characters": [
+            "char-venn"
+          ],
+          "location": "loc-ferry",
+          "reference_ids": [
+            "ref-venn",
+            "ref-ferry"
+          ],
+          "dialogue": [],
+          "requires": {
+            "beacon": "guiding",
+            "ferry": "struck_piling"
+          },
+          "effects": {
+            "ferry": "turning"
+          },
+          "depends_on": [
+            "panel-015"
+          ]
+        },
+        {
+          "id": "panel-017",
+          "order": 17,
+          "bbox": [
+            0.05,
+            0.36,
+            0.43,
+            0.28
+          ],
+          "intent": "Resolve the danger through readable space.",
+          "art": "The ferry stern clears the final piling by a narrow distance.",
+          "composition": "Wide geographic shot with tower left and pilings right.",
+          "characters": [
+            "char-venn"
+          ],
+          "location": "loc-ferry",
+          "reference_ids": [
+            "ref-venn",
+            "ref-ferry"
+          ],
+          "dialogue": [],
+          "requires": {
+            "ferry": "turning"
+          },
+          "effects": {
+            "ferry": "safe"
+          },
+          "depends_on": [
+            "panel-016"
+          ]
+        },
+        {
+          "id": "panel-018",
+          "order": 18,
+          "bbox": [
+            0.52,
+            0.36,
+            0.43,
+            0.59
+          ],
+          "intent": "Show the cost remains after the rescue.",
+          "art": "The lens goes dark. Iva raises the clear ampoule to her ear and hears nothing.",
+          "composition": "Same framing as page one's memory close-up, now wet and without smile.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-beacon",
+          "reference_ids": [
+            "ref-iva",
+            "ref-beacon",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "memory": "spent",
+            "ferry": "safe"
+          },
+          "effects": {
+            "beacon": "dark"
+          },
+          "depends_on": [
+            "prop-memory",
+            "panel-017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-07",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-019",
+          "order": 19,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.22
+          ],
+          "intent": "Bring absence into the room.",
+          "art": "Back in the workshop, Iva places the clear glass where the folded cloth had been.",
+          "composition": "Quiet medium view; original workbench geography preserved.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-workshop",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "memory": "spent"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-018"
+          ]
+        },
+        {
+          "id": "panel-020",
+          "order": 20,
+          "bbox": [
+            0.05,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "Make memory loss concrete.",
+          "art": "She leans toward the copper kettle, trying to remember the laugh. Her hand stays still.",
+          "composition": "Close on face and dented kettle, no supernatural effects.",
+          "characters": [
+            "char-iva"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-workshop"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-iva",
+              "text": "I know she laughed."
+            }
+          ],
+          "requires": {
+            "memory": "spent"
+          },
+          "effects": {},
+          "depends_on": [
+            "panel-019"
+          ]
+        },
+        {
+          "id": "panel-021",
+          "order": 21,
+          "bbox": [
+            0.52,
+            0.31,
+            0.43,
+            0.28
+          ],
+          "intent": "Return the rescue as human presence.",
+          "art": "The workshop door opens. Venn stands dripping, cap in both hands; the lunch tin hangs at his belt.",
+          "composition": "Medium doorway shot; Iva back left, Venn right.",
+          "characters": [
+            "char-iva",
+            "char-venn"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-venn",
+            "ref-workshop"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-venn",
+              "text": "I saw your light."
+            }
+          ],
+          "requires": {
+            "ferry": "safe"
+          },
+          "effects": {
+            "venn": "rescued"
+          },
+          "depends_on": [
+            "panel-020"
+          ]
+        },
+        {
+          "id": "panel-022",
+          "order": 22,
+          "bbox": [
+            0.05,
+            0.63,
+            0.9,
+            0.32
+          ],
+          "intent": "Offer connection without replacing the loss.",
+          "art": "Venn lifts the iron lunch tin: inside is a small dry packet of tea. Iva looks at it, not at him.",
+          "composition": "Two hands at equal height; splint left, pale cuff right.",
+          "characters": [
+            "char-iva",
+            "char-venn"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-venn",
+            "ref-workshop"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-venn",
+              "text": "Still dry."
+            }
+          ],
+          "requires": {
+            "venn": "rescued"
+          },
+          "effects": {},
+          "depends_on": [
+            "panel-021"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-08",
+      "reading_direction": "ltr",
+      "panels": [
+        {
+          "id": "panel-023",
+          "order": 23,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.43
+          ],
+          "intent": "Make her choose company.",
+          "art": "Iva puts the tea beside the kettle. Venn waits at the open door.",
+          "composition": "Medium wide composition with a deliberate empty chair.",
+          "characters": [
+            "char-iva",
+            "char-venn"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-venn",
+            "ref-workshop"
+          ],
+          "dialogue": [
+            {
+              "speaker": "char-iva",
+              "text": "Stay. It's going to boil."
+            }
+          ],
+          "requires": {
+            "memory": "spent",
+            "venn": "rescued"
+          },
+          "effects": {},
+          "depends_on": [
+            "panel-022"
+          ]
+        },
+        {
+          "id": "panel-024",
+          "order": 24,
+          "bbox": [
+            0.05,
+            0.52,
+            0.9,
+            0.43
+          ],
+          "intent": "Close on a new shared sound while honoring the permanent cost.",
+          "art": "The two sit at the workbench as the kettle begins to whistle. The clear ampoule lies between them. Neither looks at it.",
+          "composition": "Wide final panel repeating page one's geography; warm negative space rather than triumphant spectacle.",
+          "characters": [
+            "char-iva",
+            "char-venn"
+          ],
+          "location": "loc-workshop",
+          "reference_ids": [
+            "ref-iva",
+            "ref-venn",
+            "ref-workshop",
+            "ref-memory"
+          ],
+          "dialogue": [],
+          "requires": {
+            "memory": "spent",
+            "venn": "rescued"
+          },
+          "effects": {},
+          "depends_on": [
+            "prop-memory",
+            "panel-023"
+          ]
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "id": "export-reader",
+      "format": "pdf",
+      "page_ids": [
+        "page-01",
+        "page-02",
+        "page-03",
+        "page-04",
+        "page-05",
+        "page-06",
+        "page-07",
+        "page-08"
+      ]
+    },
+    {
+      "id": "export-archive",
+      "format": "cbz",
+      "page_ids": [
+        "page-01",
+        "page-02",
+        "page-03",
+        "page-04",
+        "page-05",
+        "page-06",
+        "page-07",
+        "page-08"
+      ]
+    }
+  ],
+  "snapshot_sha256": "880af52d376e2fd5265e5a3edb66c2c54040ff28e37140ad5e6d21e22681e7c5"
+}
