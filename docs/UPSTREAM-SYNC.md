@@ -28,7 +28,7 @@ git checkout -b sync/upstream-YYYY-MM-DD
 git cherry-pick <commit-sha>           # one at a time
 # resolve conflicts — expect package.json, README.md, muapi.js
 pnpm --ignore-workspace install
-pnpm --ignore-workspace exec next build
+pnpm --ignore-workspace run build
 git checkout main && git merge --no-ff sync/upstream-YYYY-MM-DD
 ```
 

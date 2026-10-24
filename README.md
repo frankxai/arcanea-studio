@@ -54,10 +54,10 @@ Arcanea Studio should treat `@arcanea/world-sdk` worlds as canonical creative br
 pnpm install --ignore-workspace
 
 # One-shot build
-pnpm --ignore-workspace exec next build
+pnpm --ignore-workspace run build
 
 # Dev (only when actively testing UI)
-pnpm --ignore-workspace exec next dev
+pnpm --ignore-workspace run dev
 
 # Electron package
 pnpm --ignore-workspace run electron:build:win    # or :mac / :linux
