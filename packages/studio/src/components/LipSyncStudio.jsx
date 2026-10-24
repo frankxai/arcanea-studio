@@ -8,7 +8,7 @@ import {
   videoLipSyncModels,
   getLipSyncModelById,
   getResolutionsForLipSyncModel,
-} from "../models.js";
+} from "../../../../src/lib/models.js";
 
 // ---------------------------------------------------------------------------
 // Upload button states

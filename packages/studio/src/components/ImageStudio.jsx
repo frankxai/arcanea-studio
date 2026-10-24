@@ -12,7 +12,7 @@ import {
   getResolutionsForI2IModel,
   getQualityFieldForI2IModel,
   getMaxImagesForI2IModel,
-} from "../models.js";
+} from "../../../../src/lib/models.js";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
