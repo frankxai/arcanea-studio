@@ -1,4 +1,4 @@
-import { getModelById, getVideoModelById, getI2IModelById, getI2VModelById, getV2VModelById, getLipSyncModelById } from './models.js';
+import { getModelById, getVideoModelById, getI2IModelById, getI2VModelById, getV2VModelById, getLipSyncModelById } from '../../src/lib/models.js';
 
 const BASE_URL = 'https://api.muapi.ai';
 
