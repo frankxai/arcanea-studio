@@ -13,7 +13,7 @@ import {
   getDurationsForI2VModel,
   getResolutionsForI2VModel,
   getModesForModel,
-} from "../../../../src/lib/models.js";
+} from "../models.js";
 
 // ── tiny helpers ──────────────────────────────────────────────────────────────
 
